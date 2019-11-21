@@ -1,10 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { createAppContainer, createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Header } from 'react-native-elements';
 
 import Home from '../screens/Home';
 import Theater from '../screens/Theater';
+
+<Header
+  placement="left"
+  leftComponent={{ icon: 'menu', color: '#fff' }}
+  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+  rightComponent={{ icon: 'home', color: '#fff' }}
+/>
 
 const TabNavigator = createBottomTabNavigator({
     Home: Home,
@@ -30,12 +38,4 @@ const TabNavigator = createBottomTabNavigator({
     initialRouteName: 'Home'
 })
 
-const StackNavigator = createStackNavigator({
-    TabNavigator: TabNavigator
-},{
-    defaultNavigationOptions: ({ navigation }) => ({
-        headerTitle: "XXI"
-    })
-})
-
-export default createAppContainer(StackNavigator);
+export default createAppContainer(TabNavigator);
