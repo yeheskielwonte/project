@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import StackNav from './navigator/StackNav';
 
-export default function App() {
+
+export default function Home() {
   return (
-    <StackNav/>
+    <View>
+      <Text>Home</Text>
+    </View>
   );
 }
