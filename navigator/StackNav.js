@@ -6,13 +6,7 @@ import { Header } from 'react-native-elements';
 
 import Home from '../screens/Home';
 import Theater from '../screens/Theater';
-
-<Header
-  placement="left"
-  leftComponent={{ icon: 'menu', color: '#fff' }}
-  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-  rightComponent={{ icon: 'home', color: '#fff' }}
-/>
+import Profile from '../screens/Profile';
 
 const TabNavigator = createBottomTabNavigator({
     Home: Home,
@@ -32,7 +26,7 @@ const TabNavigator = createBottomTabNavigator({
           },
     }),
     tabBarOptions: {
-        activeTintColor: 'tomato',
+        activeTintColor: 'blue',
         inactiveTintColor: 'gray',
     },
     initialRouteName: 'Home'
