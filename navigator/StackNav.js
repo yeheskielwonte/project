@@ -4,23 +4,23 @@ import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Header } from 'react-native-elements';
 
-import Home from '../screens/Home';
-import Theater from '../screens/Theater';
-import Profile from '../screens/Profile';
+import Global from '../screens/Global';
+import Indonesia from '../screens/Indonesia';
+import test from '../screens/test';
 
 const TabNavigator = createBottomTabNavigator({
-    Home: Home,
-    Theater: Theater
+    Global: Global,
+    Indonesia: Indonesia
 },{
     defaultNavigationOptions: ({ navigation }) => ({
         tabBarIcon: ({ focused, horizontal, tintColor }) => {
             const { routeName } = navigation.state;
             let IconComponent = Ionicons;
             let iconName;
-            if (routeName === 'Home') {
-                iconName = `ios-home`;
-            } else if (routeName === 'Theater') {
-                iconName = `ios-calendar`;
+            if (routeName === 'Global') {
+                iconName = `md-globe`;
+            } else if (routeName === 'Indonesia') {
+                iconName = `ios-information`;
             }
             return <IconComponent name={iconName} size={25} color={tintColor} />;
           },
@@ -29,7 +29,7 @@ const TabNavigator = createBottomTabNavigator({
         activeTintColor: 'blue',
         inactiveTintColor: 'gray',
     },
-    initialRouteName: 'Home'
+    initialRouteName: 'Global'
 })
 
 export default createAppContainer(TabNavigator);
