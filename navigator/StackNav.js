@@ -6,7 +6,6 @@ import { Header } from 'react-native-elements';
 
 import Global from '../screens/Global';
 import Indonesia from '../screens/Indonesia';
-import test from '../screens/test';
 
 const TabNavigator = createBottomTabNavigator({
     Global: Global,
